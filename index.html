@@ -1,1 +1,151 @@
-i am rasel
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rasel Biswas — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#2563eb;--muted:#6b7280;--bg:#0f172a}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:#f8fafc;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    .container{max-width:1000px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-weight:600}
+    h1{margin:8px 0 4px;font-size:28px}
+    p.lead{color:var(--muted);margin:0}
+
+    .hero{display:grid;grid-template-columns:1fr 300px;gap:24px;margin-top:28px;align-items:center}
+    .card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+
+    /* Projects grid */
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .proj{padding:14px;border-radius:10px;background:#fff;border:1px solid #eef2ff}
+    .proj h3{margin:0 0 8px;font-size:16px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{font-size:12px;color:var(--accent);background:rgba(37,99,235,0.08);padding:6px 8px;border-radius:999px}
+
+    /* Contact */
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{padding:10px;border:1px solid #e6eef8;border-radius:8px;font-family:inherit}
+    button{background:var(--accent);color:white;padding:10px 12px;border-radius:8px;border:0;font-weight:600;cursor:pointer}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .projects{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .projects{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      nav a{margin-left:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">RB</div>
+        <div>
+          <div style="font-weight:700">Md Rasel Biswash</div>
+          <div style="color:var(--muted);font-size:13px">Full‑Stack Developer • Student</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h1>Hello — I'm Rasel</h1>
+          <p class="lead">I build web apps with HTML, CSS, PHP and MySQL. I love clean UIs, small utilities, and learning new tech.</p>
+          <div style="margin-top:14px;display:flex;gap:8px">
+            <a href="#projects" style="text-decoration:none"><button>See projects</button></a>
+            <a href="#contact" style="text-decoration:none"><button style="background:#fff;border:1px solid #e6eef8;color:var(--muted)">Hire me</button></a>
+          </div>
+        </div>
+
+        <section id="projects">
+          <h2 style="margin-top:18px">Selected projects</h2>
+          <div class="projects">
+            <article class="proj card">
+              <h3>Rental Service System</h3>
+              <p style="color:var(--muted);font-size:13px;margin:6px 0">Seat/room/flat rental management with booking and admin panel.</p>
+              <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML/CSS</span></div>
+            </article>
+
+            <article class="proj card">
+              <h3>File Converter</h3>
+              <p style="color:var(--muted);font-size:13px;margin:6px 0">Batch convert XLSX↔DOCX and DOCX→PDF (server-side).</p>
+              <div class="tags"><span class="tag">PHP</span><span class="tag">LibreOffice</span></div>
+            </article>
+
+            <article class="proj card">
+              <h3>Hill Climbing Visualizer</h3>
+              <p style="color:var(--muted);font-size:13px;margin:6px 0">Algorithm demo for hospital placement optimization.</p>
+              <div class="tags"><span class="tag">Python</span><span class="tag">Algorithm</span></div>
+            </article>
+
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Quick Info</h3>
+          <p style="margin:6px 0;color:var(--muted)">Student • Full‑Stack • Garage for rickshaw charging • Fluent in HTML, CSS, PHP, MySQL</p>
+          <hr style="border:none;border-top:1px solid #f1f5f9;margin:12px 0">
+          <h4 style="margin:6px 0">Skills</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="card">
+          <h4>Contact</h4>
+          <p style="color:var(--muted);font-size:13px;margin:6px 0">Email: you@example.com</p>
+          <p style="color:var(--muted);font-size:13px;margin:6px 0">Location: Bangladesh</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" style="margin-top:22px">
+      <div class="card">
+        <h2>About me</h2>
+        <p style="color:var(--muted)">I am a university student building practical web projects. I enjoy solving problems, optimizing simple systems, and creating small tools that help people.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:20px">
+      <div class="card">
+        <h2>Contact</h2>
+        <form onsubmit="event.preventDefault();alert('Message sent (demo)')">
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <textarea rows="4" placeholder="Message" required></textarea>
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>© "Your Name" — Built with ❤️ • Save this file as <code>index.html</code></p>
+    </footer>
+  </div>
+</body>
+</html>
